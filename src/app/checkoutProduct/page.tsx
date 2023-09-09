@@ -121,27 +121,29 @@ const Product = () => {
       {
         (data) ? (
           <div className="tablet:flex  tablet:w-[1100px] mx-auto  justify-between mt-20">
-            <div className=' w-[900px] mx-auto '>
+            <div className=' tablet:w-[900px] mx-auto '>
               {
                 data.map((value: any, id: any) => {
                   return <div key={id}>
-                    <div className=' flex hover:shadow-lg tablet:w-[800px]  mobile:w-[600px] gap-5 mt-5 '>
-                      <div>
-                        <Image className='tablet:w-[200px]' width={100} height={100} src={value.image} alt={"image"} />
+                    <div className=' flex hover:shadow-lg tablet:w-[800px]   gap-5 mt-5 '>
+                      <div className="flex  gap-5" > <div>
+                        <Image className='tablet:w-[200px] mobile:w-[400px]' width={100} height={100} src={value.image} alt={"image"} />
                       </div>
 
-                      <div className='space-y-2'>
-                        <h1 className='text-xl '>{value.title}</h1>
-                        <p className='text-gray-400 text-xl'>Sweater</p>
-                        <h2 className='text-lg text-gray-500  '>XS Size</h2>
-                        <h1 className='font-bold'>Delivery Estimation</h1>
+                        <div className='space-y-2 w-60 '>
+                          <h1 className='text-xl '>{value.title}</h1>
+                          <p className='text-gray-400 text-xl'>Sweater</p>
+                          <h2 className='text-lg text-gray-500  '>XS Size</h2>
+                          <h1 className='font-bold'>Delivery Estimation</h1>
 
 
-                        <h1 className='text-yellow-500 font-bold mt-2'>5 Working Days</h1>
-                        <h1 className='font-bold text-xl mt-3'>${getProductPrice(value.id)}</h1>
+                          <h1 className='text-yellow-500 font-bold mt-2'>5 Working Days</h1>
+                          <h1 className='font-bold text-xl mt-3'>${getProductPrice(value.id)}</h1>
+                        </div>
                       </div>
-                      <button> <RiDeleteBin6Line className="text-2xl ml-72 " onClick={() => deleteCartItem(value.id)} />
-                        <div className='flex space-x-4 ml-44 mt-32'>
+                      <button className="">
+                        <RiDeleteBin6Line className="text-2xl tablet:ml-72 mobile:ml-32 " onClick={() => deleteCartItem(value.id)} />
+                        <div className='tablet:flex space-x-4 tablet:ml-44 mt-32'>
                           <button
                             onClick={() => { onQuantityMinus(value.id) }} className='text-2xl  rounded-full w-10 h-10 shadow-lg'
                           > - </button>

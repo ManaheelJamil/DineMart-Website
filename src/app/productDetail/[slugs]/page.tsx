@@ -96,10 +96,10 @@ const Page = ({ params }: { params: { slugs: string } }) => {
           <div>
             <div className=' tablet:flex small:flex gap-5 tablet:justify-center mobile:ml-10 table:ml-0 py-20 '>
               <div>
-                <img className='tablet:w-[100px] mobile:hidden small:hidden small:w-[50px]' src={item.image} />
+                <img className='tablet:w-[100px] mobile:hidden small:hidden ' src={item.image} />
               </div>
               <div>
-                <img className='tablet:w-[500px] mobile:w-[200px]' src={item.image} />
+                <img className='tablet:w-[500px] ' src={item.image} />
               </div>
               <div>
                 <h1 className='tablet:text-3xl small:text-2xl mobile:text-lg mobile:mt-0 tablet:mt-20 capitalize '>{item.name}</h1>
@@ -130,13 +130,13 @@ const Page = ({ params }: { params: { slugs: string } }) => {
               </div>
 
             </div>
-            <div className='relative mt-10 tablet:ml-40 mobile:ml-5 tablet:w-[1000px] mobile:w-[80vw] '>
+            <div className='relative mt-10 tablet:ml-40 mobile:ml-5 tablet:w-[1000px] '>
               <p className='tablet:text-9xl small:text-8xl mobile:text-6xl text-[#f2f3f7] font-extrabold '>Overview</p>
               <p className='absolute tablet:text-2xl mobile:text-lg font-bold top-[45%] '>Product Information</p>
               <br />
               <hr />
             </div>
-            <div className='tablet:w-[900px] mobile:w-[400px] tablet:mx-auto mobile:ml-10 small:mx-auto'>
+            <div className='tablet:w-[900px]  tablet:mx-auto mobile:ml-10 small:mx-auto'>
               <div className='tablet:flex small:flex  justify-between mt-10'>
                 <h1 className='text-xl text-gray-500 font-bold'>PRODUCT DETAILS</h1>
                 <p className='tablet:w-[550px] small:w-[500px]  mobile:text-sm mobile:w-[80vw] tracking-wide small:text-sm tablet:text-lg text-gray-500'>
